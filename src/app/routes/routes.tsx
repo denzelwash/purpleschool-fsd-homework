@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router'
 import { ROUTE_PATH } from '../consts'
+import { CategoryPage } from '../../pages'
 
 export const router = createBrowserRouter([
 	{
@@ -16,13 +17,13 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: ROUTE_PATH.CATEGORY,
-				element: <div>Category</div>
+				Component: CategoryPage
 			},
 			{
-				path: ROUTE_PATH.ARTICLE.BASE,
+				path: ROUTE_PATH.RATING.BASE,
 				children: [
 					{
-						path: ROUTE_PATH.ARTICLE.DETAIL,
+						path: ROUTE_PATH.RATING.DETAIL,
 						element: <div>Article</div>
 					}
 				]

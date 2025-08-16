@@ -2,8 +2,8 @@ export const ROUTE_PATH = {
 	HOME: '/',
 	COMMUNITY: 'community',
 	CATEGORY: ':category',
-	ARTICLE: {
-		BASE: 'article',
+	RATING: {
+		BASE: 'rating',
 		DETAIL: ':alias'
 	},
 	PROFILE: {
