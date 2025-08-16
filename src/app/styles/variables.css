@@ -1,0 +1,22 @@
+:root {
+	--dominant-main: #ffffff;
+	--dominant-dop: #f6f8fc;
+
+	--content-dark: #373737;
+	--content-medium: #787a7c;
+	--content-light: #dddfe1;
+
+	--blue-dark: #0f52c2;
+	--blue-medium: #1f74e7;
+	--blue-light: #6399f6;
+
+	--orange: #f16600;
+
+	--red-light: #f0776c;
+	--red: #ea4335;
+
+	--green-light: #53cc93;
+	--green: #21ba72;
+
+	--font-family: 'Inter', sans-serif;
+}
