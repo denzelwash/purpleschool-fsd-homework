@@ -2,7 +2,7 @@ import cn from 'classnames'
 
 import styles from './Tag.module.css'
 import type { TagProps } from './Tag.props'
-import { Icon } from '../../../assets/Icon/Icon'
+import { Icon } from '../Icon/Icon'
 
 export const Tag = ({ icon, size, color, children, className }: TagProps) => {
 	const IconComponent = Icon[icon]

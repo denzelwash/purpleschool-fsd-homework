@@ -1,5 +1,5 @@
 import type { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
-import type { IconType } from '../../../assets/Icon/Icon'
+import type { IconType } from '../Icon/Icon'
 
 export interface TagProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	size: 's' | 'm'
