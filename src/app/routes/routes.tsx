@@ -1,6 +1,8 @@
 import { createBrowserRouter } from 'react-router'
 import { ROUTE_PATH } from '../../shared/config/routes'
 import { RootLayout } from '../layouts/index'
+import { CoursesPage } from '../../pages/courses'
+import { MainPage } from '../../pages/main'
 
 export const router = createBrowserRouter([
 	{
@@ -9,7 +11,7 @@ export const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: <div>Main</div>
+				Component: MainPage
 			},
 			{
 				path: ROUTE_PATH.AUTH.BASE,
@@ -33,7 +35,7 @@ export const router = createBrowserRouter([
 				children: [
 					{
 						index: true,
-						element: <div>Courses</div>
+						Component: CoursesPage
 					},
 					{
 						path: ROUTE_PATH.COURSES.DETAIL,
