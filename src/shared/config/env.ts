@@ -1,7 +1,7 @@
 export interface EnvConfig {
-	API_URl: string
+	API_URL: string
 }
 
 export const CONFIG: EnvConfig = {
-	API_URl: import.meta.env.API_URL
+	API_URL: import.meta.env.API_URL
 }
