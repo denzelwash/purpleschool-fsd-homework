@@ -1,0 +1,39 @@
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	padding: 0.5rem;
+	border: 1px solid #ececec;
+	margin: 0.25rem 0;
+}
+
+.tabs button {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	border: none;
+	border-radius: 0.25rem;
+}
+
+.tabs button span {
+	margin: 0;
+}
+
+.tabs button i {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	background-color: #000;
+	border-radius: 50%;
+	color: #fff;
+	font-style: normal;
+}
+
+.active {
+	background-color: #e0d9f5;
+	pointer-events: none;
+}
