@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button, Checkbox, Graph, InfoBox, Input, Radio, Tabs, type TabsProps } from '../../../../shared/ui'
+import { Button, Checkbox, Graph, InfoBox, Input, Radio, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
 
 const tabs: TabsProps['tabs'] = [
 	{
@@ -41,6 +41,7 @@ export const CoursesPage = () => {
 			<Tabs tabs={tabs} activeTab={activeTab} onTabChange={(value) => setActiveTab(value)} />
 			<Graph />
 			<InfoBox text={3500} desc="Бонусов" icon="Check" link="referral" onClick={console.log} />
+			<Tag>tag</Tag>
 		</div>
 	)
 }
