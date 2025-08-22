@@ -7,7 +7,7 @@ export const Rating = ({ children, icon }: RatingProps) => {
 
 	return (
 		<div className={style.rating}>
-			<IconComponent />
+			<IconComponent width={16} height={16} />
 			{children}
 		</div>
 	)
