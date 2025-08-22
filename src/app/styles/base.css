@@ -8,8 +8,19 @@
 body {
 	font-family: var(--font-family);
 	margin: 0;
-	display: flex;
-	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
+}
+
+.link {
+	color: #000;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100%;
 }

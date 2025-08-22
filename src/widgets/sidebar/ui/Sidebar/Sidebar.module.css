@@ -1,0 +1,9 @@
+.sidebar {
+	background-color: #1f1f29;
+	padding: 1rem 0;
+}
+
+.nav {
+	display: grid;
+	gap: 1rem;
+}
