@@ -1,7 +1,7 @@
 import style from './Link.module.css'
 import { NavLink } from 'react-router'
 import type { LinkProps } from './Link.props'
-import { Icon } from '../Icon/Icon'
+import { Icon } from '../../ui'
 import classNames from 'classnames'
 
 export const Link = ({ url, text, icon }: LinkProps) => {

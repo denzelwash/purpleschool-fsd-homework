@@ -1,4 +1,4 @@
-import type { IconType } from '../Icon/Icon'
+import type { IconType } from '../../ui'
 
 export interface InfoBoxProps {
 	icon: IconType

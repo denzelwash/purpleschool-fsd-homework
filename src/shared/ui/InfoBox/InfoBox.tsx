@@ -1,5 +1,5 @@
 import style from './InfoBox.module.css'
-import { Icon } from '../Icon/Icon'
+import { Icon } from '../../ui'
 import type { InfoBoxProps } from './InfoBox.props'
 import classNames from 'classnames'
 

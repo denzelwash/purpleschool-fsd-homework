@@ -1,4 +1,4 @@
-import { Icon } from '../Icon/Icon'
+import { Icon } from '../../ui'
 import style from './Rating.module.css'
 import type { RatingProps } from './Rating.props'
 
