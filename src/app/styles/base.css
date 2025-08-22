@@ -17,10 +17,6 @@ body {
 	text-decoration: none;
 }
 
-.link.active {
-	color: green;
-}
-
 .link:hover {
 	text-decoration: underline;
 }
