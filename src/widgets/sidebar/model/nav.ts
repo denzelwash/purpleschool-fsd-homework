@@ -1,5 +1,5 @@
 import { ROUTE_PATH } from '../../../shared/config'
-import type { IconType } from '../../../shared/ui/Icon/Icon'
+import type { IconType } from '../../../shared/ui'
 
 type NavItem = {
 	url: string
