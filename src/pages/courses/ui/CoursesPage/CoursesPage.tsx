@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
-import { Avatar } from '@/entities/user'
+import { Avatar, Stat, type StatProps } from '@/entities/user'
 
 const tabs: TabsProps['tabs'] = [
 	{
@@ -17,6 +17,25 @@ const tabs: TabsProps['tabs'] = [
 		alias: 'all-courses',
 		text: 'Все курсы',
 		value: 30
+	}
+]
+
+const stat: StatProps['items'] = [
+	{
+		icon: 'Star',
+		count: 10,
+		desc: 'Дней без перерыва'
+	},
+	{
+		icon: 'Star',
+		count: 10,
+		desc: 'Пройдено уроков'
+	},
+	{
+		icon: 'Star',
+		count: 8,
+		countSecond: 11,
+		desc: 'Получено достижений'
 	}
 ]
 
@@ -52,6 +71,7 @@ export const CoursesPage = () => {
 			</div>
 			<Card>Карточка</Card>
 			<Avatar image="https://avatars.githubusercontent.com/u/51025480?v=4" size="lg" alt="Денчик"></Avatar>
+			<Stat items={stat}></Stat>
 		</div>
 	)
 }
