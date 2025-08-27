@@ -1,5 +1,5 @@
 import { Icon, type IconType } from '@/shared/ui'
-import styles from './Stat.module.css'
+import style from './Stat.module.css'
 import type { StatProps } from './Stat.props'
 
 export const Stat = ({ items }: StatProps) => {
@@ -9,11 +9,11 @@ export const Stat = ({ items }: StatProps) => {
 	}
 
 	return (
-		<div className={styles.stat}>
-			<h2 className={styles.title}>Статистика</h2>
-			<ul className={styles.list}>
+		<div className={style.stat}>
+			<h2 className={style.title}>Статистика</h2>
+			<ul className={style.list}>
 				{items.map((item) => (
-					<li className={styles.item} key={item.desc}>
+					<li className={style.item} key={item.desc}>
 						{IconComponent(item.icon)}
 						<div>
 							<b>
