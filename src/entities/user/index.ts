@@ -1,2 +1,2 @@
-export { Avatar } from './avatar/ui'
-export { Stat, type StatProps } from './stat/ui'
+export { Avatar } from './ui'
+export { Stat, type StatProps } from './ui'
