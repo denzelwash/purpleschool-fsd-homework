@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
+import { Avatar } from '@/entities/user'
 
 const tabs: TabsProps['tabs'] = [
 	{
@@ -39,7 +40,9 @@ export const CoursesPage = () => {
 			</Radio>
 			<Input label="input" name="input" value={input} onChange={(e) => setInput(e.target.value)} />
 			<Tabs tabs={tabs} activeTab={activeTab} onTabChange={(value) => setActiveTab(value)} />
-			<Graph />
+			<Graph>
+				<div>График</div>
+			</Graph>
 			<InfoBox text={3500} desc="Бонусов" icon="Check" link="referral" onClick={console.log} />
 			<div>
 				<Tag>tag</Tag>
@@ -47,29 +50,8 @@ export const CoursesPage = () => {
 			<div>
 				<Rating icon="Star">4.8</Rating>
 			</div>
-			<Card
-				title="Frontend разработчик"
-				image="https://cdn-bucket.hb.bizmrg.com/purple-images/profile-images/c58cc4d0-9b5c-4ebe-b6a9-e789cd82aed2.jpg"
-				content={
-					<>
-						12 месяцев <br />
-						включает 3 курса
-					</>
-				}
-				tags={
-					<>
-						<Rating icon="Star">4.8</Rating>
-						<Tag>tag</Tag>
-						<Tag>tag</Tag>
-					</>
-				}
-				footer={
-					<>
-						<h2>6 000₽/мес</h2>
-						<Button>Подробнее</Button>
-					</>
-				}
-			/>
+			<Card>Карточка</Card>
+			<Avatar image="https://avatars.githubusercontent.com/u/51025480?v=4" size="lg" alt="Денчик"></Avatar>
 		</div>
 	)
 }
