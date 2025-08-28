@@ -1,1 +1,1 @@
-export { Card } from './ui'
+export { Card as CardCourse } from './ui'
