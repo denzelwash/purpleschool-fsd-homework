@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
 import { Avatar, Stat, type StatProps } from '@/entities/user'
 import { Card as CardCourse } from '@/entities/course'
+import { Message } from '@/entities/ai'
 
 const tabs: TabsProps['tabs'] = [
 	{
@@ -96,6 +97,7 @@ export const CoursesPage = () => {
 					</>
 				}
 			/>
+			<Message text="Сообщение" />
 		</div>
 	)
 }
