@@ -1,0 +1,33 @@
+.stat {
+	background-color: #1f1f29;
+	color: #fff;
+	width: 200px;
+	padding: 1rem;
+}
+
+.title {
+	font-size: 1.5rem;
+	margin: 0 0 1.5rem;
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.5rem;
+}
+
+.item {
+	border-radius: 10px;
+	padding: 1rem;
+	border: 1px solid #fff;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	justify-content: flex-start;
+}
+
+.item p {
+	margin: 0;
+}

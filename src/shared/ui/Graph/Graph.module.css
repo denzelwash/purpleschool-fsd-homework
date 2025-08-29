@@ -8,3 +8,8 @@
 	border: 1px solid #ececec;
 	margin: 0.25rem 0;
 }
+
+.title {
+	font-size: 1.5rem;
+	margin: 0 0 1rem;
+}
