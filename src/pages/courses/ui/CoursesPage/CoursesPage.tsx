@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import style from './Courses.module.css'
 import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
 import { Avatar, Stat, type StatProps } from '@/entities/user'
-import { CardCourse, MOCK_COURSES } from '@/entities/course'
+import { CardCourse, useCourseStore } from '@/entities/course'
 import { Message } from '@/entities/ai'
 
 const tabs: TabsProps['tabs'] = [
@@ -47,6 +47,27 @@ export const CoursesPage = () => {
 	const [radio, setRadio] = useState('')
 	const [input, setInput] = useState('')
 	const [activeTab, setActiveTab] = useState(tabs[0].alias)
+	const { courses, isLoading, error, loadCourses } = useCourseStore()
+
+	useEffect(() => {
+		loadCourses()
+	}, [loadCourses])
+
+	const coursesTemplate = () => {
+		return (
+			<div>
+				{isLoading && <span>Загрузка курсов...</span>}
+				{error && <span>Ошибка загрузки курсов</span>}
+				{!!courses.length && (
+					<div className={style['course-grid']}>
+						{courses.map((course) => (
+							<CardCourse key={course.id} course={course} />
+						))}
+					</div>
+				)}
+			</div>
+		)
+	}
 
 	return (
 		<div>
@@ -75,11 +96,7 @@ export const CoursesPage = () => {
 			<Card>Карточка обертка</Card>
 			<Avatar image="https://avatars.githubusercontent.com/u/51025480?v=4" size="lg" alt="Денчик"></Avatar>
 			<Stat items={stat}></Stat>
-			<div className={style['course-grid']}>
-				{MOCK_COURSES.map((course) => (
-					<CardCourse key={course.id} course={course} />
-				))}
-			</div>
+			{coursesTemplate()}
 			<Message text="Сообщение" />
 		</div>
 	)
