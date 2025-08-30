@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import style from './Courses.module.css'
 import { CardCourse, useCourseStore } from '@/entities/course'
-import { Stat, useStatStore } from '@/entities/user'
+import { Stats, useUserStore } from '@/entities/user'
 
 export const CoursesPage = () => {
 	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
-	const { stat, isLoadingStat, errorStat, loadStat } = useStatStore()
+	const { stats, isLoadingStat, errorStat, loadStat } = useUserStore()
 
 	useEffect(() => {
 		loadCourses()
@@ -36,7 +36,7 @@ export const CoursesPage = () => {
 			<div>
 				{isLoadingStat && <span>Загрузка статистики...</span>}
 				{errorStat && <span>Ошибка загрузки статистики</span>}
-				{!!stat.length && <Stat stat={stat} />}
+				{!!stats.length && <Stats stats={stats} />}
 			</div>
 		)
 	}

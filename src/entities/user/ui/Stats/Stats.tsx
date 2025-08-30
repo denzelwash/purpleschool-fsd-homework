@@ -1,11 +1,11 @@
 import { Icon } from '@/shared/ui'
-import style from './Stat.module.css'
-import type { StatProps } from './Stat.props'
-import type { Stat as TStat } from '../../model/types'
+import style from './Stats.module.css'
+import type { StatsProps } from './Stats.props'
+import type { Stats as TStats } from '../../model/types'
 import type { IconComponentType } from '@/shared/ui'
 
-export const Stat = ({ stat }: StatProps) => {
-	const IconComponent = (alias: TStat['alias']) => {
+export const Stats = ({ stats }: StatsProps) => {
+	const IconComponent = (alias: TStats['alias']) => {
 		let IconComponent: IconComponentType
 		if (alias === 'achievements') {
 			IconComponent = Icon['Star']
@@ -18,10 +18,10 @@ export const Stat = ({ stat }: StatProps) => {
 	}
 
 	return (
-		<div className={style.stat}>
+		<div className={style.stats}>
 			<h2 className={style.title}>Статистика</h2>
 			<ul className={style.list}>
-				{stat.map((item) => (
+				{stats.map((item) => (
 					<li className={style.item} key={item.desc}>
 						{IconComponent(item.alias)}
 						<div>

@@ -1,9 +1,9 @@
 // import { http } from '@/shared/api'
-import type { Stat } from '../model/types'
+import type { Stats } from '../model/types'
 import { MOCK_STAT } from '../model'
 
-export const fetchStat = async (): Promise<Stat[]> => {
-	// const response = await http.get<Course[]>('/stat')
+export const fetchStat = async (): Promise<Stats[]> => {
+	// const response = await http.get<Course[]>('/stats')
 	// return response.data
 	return await new Promise((res) => {
 		setTimeout(() => {

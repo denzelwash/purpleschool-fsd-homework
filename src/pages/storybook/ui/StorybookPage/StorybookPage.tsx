@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
-import { Avatar, Stat } from '@/entities/user'
+import { Avatar, Stats } from '@/entities/user'
 import { Message } from '@/entities/ai'
 import { CardCourse } from '@/entities/course'
 
@@ -54,8 +54,8 @@ export const StorybookPage = () => {
 			</div>
 			<Card>Карточка обертка</Card>
 			<Avatar image="https://avatars.githubusercontent.com/u/51025480?v=4" size="lg" alt="Денчик"></Avatar>
-			<Stat
-				stat={[
+			<Stats
+				stats={[
 					{
 						alias: 'days',
 						count: 8,
@@ -68,7 +68,7 @@ export const StorybookPage = () => {
 						desc: 'Достижений'
 					}
 				]}
-			></Stat>
+			></Stats>
 			<CardCourse
 				course={{
 					id: 1,

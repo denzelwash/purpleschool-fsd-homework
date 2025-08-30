@@ -1,3 +1,3 @@
 export { Avatar } from './Avatar/Avatar'
-export { Stat } from './Stat/Stat'
-export type { StatProps } from './Stat/Stat.props'
+export { Stats } from './Stats/Stats'
+export type { StatsProps } from './Stats/Stats.props'
