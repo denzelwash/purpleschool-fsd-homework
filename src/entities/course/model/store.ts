@@ -6,14 +6,18 @@ interface CourseState {
 	courses: Course[]
 	isLoading: boolean
 	error: Error | null
-	loadCourses: () => Promise<void>
+	loadCourses: (params?: { force: boolean }) => Promise<void>
 }
 
-export const useCourseStore = create<CourseState>((set) => ({
+export const useCourseStore = create<CourseState>((set, get) => ({
 	courses: [],
 	isLoading: false,
 	error: null,
-	loadCourses: async () => {
+	loadCourses: async (params) => {
+		const force = params?.force
+		if (get().isLoading || (get().courses.length > 0 && !force)) {
+			return
+		}
 		set({ isLoading: true, error: null })
 		try {
 			const data = await fetchCourses()
