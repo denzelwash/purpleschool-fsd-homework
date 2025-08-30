@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import style from './Courses.module.css'
 import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
 import { Avatar, Stat, type StatProps } from '@/entities/user'
-import { CardCourse } from '@/entities/course'
+import { CardCourse, MOCK_COURSES } from '@/entities/course'
 import { Message } from '@/entities/ai'
 
 const tabs: TabsProps['tabs'] = [
@@ -74,29 +75,11 @@ export const CoursesPage = () => {
 			<Card>Карточка обертка</Card>
 			<Avatar image="https://avatars.githubusercontent.com/u/51025480?v=4" size="lg" alt="Денчик"></Avatar>
 			<Stat items={stat}></Stat>
-			<CardCourse
-				title="Frontend разработчик"
-				image="https://cdn-bucket.hb.bizmrg.com/purple-images/profile-images/c58cc4d0-9b5c-4ebe-b6a9-e789cd82aed2.jpg"
-				content={
-					<>
-						12 месяцев <br />
-						включает 3 курса
-					</>
-				}
-				tags={
-					<>
-						<Rating icon="Star">4.8</Rating>
-						<Tag>tag</Tag>
-						<Tag>tag</Tag>
-					</>
-				}
-				footer={
-					<>
-						<h2>6 000₽/мес</h2>
-						<Button>Подробнее</Button>
-					</>
-				}
-			/>
+			<div className={style['course-grid']}>
+				{MOCK_COURSES.map((course) => (
+					<CardCourse key={course.id} course={course} />
+				))}
+			</div>
 			<Message text="Сообщение" />
 		</div>
 	)
