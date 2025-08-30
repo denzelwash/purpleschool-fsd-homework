@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
-import { Avatar, Stat, type StatProps } from '@/entities/user'
+import { Avatar, Stat } from '@/entities/user'
 import { Message } from '@/entities/ai'
 import { CardCourse } from '@/entities/course'
 
@@ -19,25 +19,6 @@ const tabs: TabsProps['tabs'] = [
 		alias: 'all-courses',
 		text: 'Все курсы',
 		value: 30
-	}
-]
-
-const stat: StatProps['items'] = [
-	{
-		icon: 'Star',
-		count: 10,
-		desc: 'Дней без перерыва'
-	},
-	{
-		icon: 'Star',
-		count: 10,
-		desc: 'Пройдено уроков'
-	},
-	{
-		icon: 'Star',
-		count: 8,
-		countSecond: 11,
-		desc: 'Получено достижений'
 	}
 ]
 
@@ -73,7 +54,21 @@ export const StorybookPage = () => {
 			</div>
 			<Card>Карточка обертка</Card>
 			<Avatar image="https://avatars.githubusercontent.com/u/51025480?v=4" size="lg" alt="Денчик"></Avatar>
-			<Stat items={stat}></Stat>
+			<Stat
+				stat={[
+					{
+						alias: 'days',
+						count: 8,
+						desc: 'Дней без перерыва'
+					},
+					{
+						alias: 'achievements',
+						count: 8,
+						countSecond: 10,
+						desc: 'Достижений'
+					}
+				]}
+			></Stat>
 			<CardCourse
 				course={{
 					id: 1,

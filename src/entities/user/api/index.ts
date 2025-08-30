@@ -1,0 +1,1 @@
+export { fetchStat } from './requests'

@@ -1,19 +1,25 @@
 import { useEffect } from 'react'
 import style from './Courses.module.css'
 import { CardCourse, useCourseStore } from '@/entities/course'
+import { Stat, useStatStore } from '@/entities/user'
 
 export const CoursesPage = () => {
-	const { courses, isLoading, error, loadCourses } = useCourseStore()
+	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
+	const { stat, isLoadingStat, errorStat, loadStat } = useStatStore()
 
 	useEffect(() => {
 		loadCourses()
 	}, [loadCourses])
 
+	useEffect(() => {
+		loadStat()
+	}, [loadStat])
+
 	const coursesTemplate = () => {
 		return (
 			<div>
-				{isLoading && <span>Загрузка курсов...</span>}
-				{error && <span>Ошибка загрузки курсов</span>}
+				{isLoadingCourses && <span>Загрузка курсов...</span>}
+				{errorCourses && <span>Ошибка загрузки курсов</span>}
 				{!!courses.length && (
 					<div className={style['course-grid']}>
 						{courses.map((course) => (
@@ -25,5 +31,20 @@ export const CoursesPage = () => {
 		)
 	}
 
-	return <div>{coursesTemplate()}</div>
+	const statTemplate = () => {
+		return (
+			<div>
+				{isLoadingStat && <span>Загрузка статистики...</span>}
+				{errorStat && <span>Ошибка загрузки статистики</span>}
+				{!!stat.length && <Stat stat={stat} />}
+			</div>
+		)
+	}
+
+	return (
+		<>
+			<div>{coursesTemplate()}</div>
+			<div>{statTemplate()}</div>
+		</>
+	)
 }

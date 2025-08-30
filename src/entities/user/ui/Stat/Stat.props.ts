@@ -1,10 +1,5 @@
-import type { IconType } from '@/shared/ui'
+import type { Stat } from '../../model/types'
 
 export interface StatProps {
-	items: {
-		icon: IconType
-		count: number
-		countSecond?: number
-		desc: string
-	}[]
+	stat: Stat[]
 }
