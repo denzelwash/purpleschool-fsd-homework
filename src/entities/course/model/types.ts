@@ -7,3 +7,9 @@ export interface Course {
 	rating?: number
 	tags?: string[]
 }
+
+export interface CourseCount {
+	alias: 'my' | 'recommended' | 'all'
+	text: string
+	value: number
+}

@@ -1,2 +1,2 @@
-export { MOCK_STAT } from './mocks'
+export { MOCK_STATS } from './mocks'
 export { useUserStore } from './store'

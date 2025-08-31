@@ -1,6 +1,6 @@
 import type { Stats } from './types'
 
-export const MOCK_STAT: Stats[] = [
+export const MOCK_STATS: Stats[] = [
 	{
 		alias: 'achievements',
 		count: 8,

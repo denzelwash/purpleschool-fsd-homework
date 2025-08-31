@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { fetchStat } from '../api/requests'
+import { fetchStats } from '../api/requests'
 import type { Stats, User } from './types'
 
 interface UserState {
@@ -8,10 +8,9 @@ interface UserState {
 	errorProfile: Error | null
 
 	stats: Stats[]
-	isLoadingStat: boolean
-	errorStat: Error | null
-
-	loadStat: (params?: { force: boolean }) => Promise<void>
+	isLoadingStats: boolean
+	errorStats: Error | null
+	loadStats: (params?: { force: boolean }) => Promise<void>
 }
 
 export const useUserStore = create<UserState>((set, get) => ({
@@ -20,20 +19,20 @@ export const useUserStore = create<UserState>((set, get) => ({
 	errorProfile: null,
 
 	stats: [],
-	isLoadingStat: false,
-	errorStat: null,
+	isLoadingStats: false,
+	errorStats: null,
 
-	loadStat: async (params) => {
+	loadStats: async (params) => {
 		const force = params?.force
-		if (get().isLoadingStat || (get().stats.length > 0 && !force)) {
+		if (get().isLoadingStats || (get().stats.length > 0 && !force)) {
 			return
 		}
-		set({ isLoadingStat: true, errorStat: null })
+		set({ isLoadingStats: true, errorStats: null })
 		try {
-			const data = await fetchStat()
-			set({ stats: data, isLoadingStat: false })
+			const data = await fetchStats()
+			set({ stats: data, isLoadingStats: false })
 		} catch (e) {
-			set({ errorStat: e as Error, isLoadingStat: false })
+			set({ errorStats: e as Error, isLoadingStats: false })
 		}
 	}
 }))

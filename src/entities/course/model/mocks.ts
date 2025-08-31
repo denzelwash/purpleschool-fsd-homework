@@ -1,4 +1,4 @@
-import type { Course } from './types'
+import type { Course, CourseCount } from './types'
 
 export const MOCK_COURSES: Course[] = [
 	{
@@ -18,5 +18,23 @@ export const MOCK_COURSES: Course[] = [
 		rating: 4.5,
 		price: 15000,
 		tags: ['Node.js', 'Backend']
+	}
+]
+
+export const MOCK_COURSE_COUNT: CourseCount[] = [
+	{
+		alias: 'my',
+		text: 'Мои курсы',
+		value: 1
+	},
+	{
+		alias: 'recommended',
+		text: 'Рекомендуемые',
+		value: 3
+	},
+	{
+		alias: 'all',
+		text: 'Все курсы',
+		value: 54
 	}
 ]

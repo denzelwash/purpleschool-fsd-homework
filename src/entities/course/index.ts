@@ -1,4 +1,4 @@
 export { Card as CardCourse } from './ui'
-export { MOCK_COURSES } from './model'
+export { MOCK_COURSES, useCourseStore } from './model'
 export { fetchCourses } from './api'
-export { useCourseStore } from './model'
+export { COURSE_TABS } from './config'
