@@ -31,7 +31,7 @@ export const CoursesPage = () => {
 		)
 	}
 
-	const statTemplate = () => {
+	const statsTemplate = () => {
 		return (
 			<div>
 				{isLoadingStat && <span>Загрузка статистики...</span>}
@@ -44,7 +44,7 @@ export const CoursesPage = () => {
 	return (
 		<>
 			<div>{coursesTemplate()}</div>
-			<div>{statTemplate()}</div>
+			<div>{statsTemplate()}</div>
 		</>
 	)
 }

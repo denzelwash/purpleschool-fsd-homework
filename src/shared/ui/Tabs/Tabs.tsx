@@ -8,7 +8,7 @@ export const Tabs = ({ tabs, activeTab, onTabChange }: TabsProps) => {
 			{tabs.map((tab) => (
 				<button key={tab.alias} onClick={() => onTabChange(tab.alias)} className={classNames({ [style.active]: activeTab === tab.alias })}>
 					<span>{tab.text}</span>
-					<i>{tab.value}</i>
+					{tab.value && <i>{tab.value}</i>}
 				</button>
 			))}
 		</div>
