@@ -7,3 +7,4 @@ export const Icon = {
 }
 
 export type IconType = keyof typeof Icon
+export type IconComponentType = (typeof Icon)[IconType]

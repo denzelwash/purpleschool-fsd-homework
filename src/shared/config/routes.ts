@@ -22,5 +22,6 @@ export const ROUTE_PATH = {
 	},
 	COMMUNITY: '/community',
 	HELP: '/help',
+	STORYBOOK: '/storybook',
 	ERROR: '*'
 } as const

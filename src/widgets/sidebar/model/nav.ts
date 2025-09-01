@@ -42,5 +42,10 @@ export const nav: NavItem[] = [
 		url: ROUTE_PATH.HELP,
 		name: 'Помощь',
 		icon: 'Star'
+	},
+	{
+		url: ROUTE_PATH.STORYBOOK,
+		name: 'Компоненты интерфейса',
+		icon: 'Star'
 	}
 ]

@@ -1,2 +1,4 @@
-export { Avatar } from './ui'
-export { Stat, type StatProps } from './ui'
+export { Avatar, Stats } from './ui'
+export { MOCK_STATS } from './model'
+export { fetchStats } from './api'
+export { useUserStore } from './model'

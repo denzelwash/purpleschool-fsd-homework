@@ -1,4 +1,4 @@
-export { Icon, type IconType } from './Icon/Icon'
+export { Icon, type IconType, type IconComponentType } from './Icon/Icon'
 export { Button } from './Button/Button'
 export { Checkbox } from './Checkbox/Checkbox'
 export { Radio } from './Radio/Radio'

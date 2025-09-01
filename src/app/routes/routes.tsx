@@ -3,6 +3,7 @@ import { ROUTE_PATH } from '../../shared/config'
 import { RootLayout } from '../layouts/index'
 import { CoursesPage } from '../../pages/courses'
 import { MainPage } from '../../pages/main'
+import { StorybookPage } from '../../pages/storybook'
 
 export const router = createBrowserRouter([
 	{
@@ -84,6 +85,10 @@ export const router = createBrowserRouter([
 			{
 				path: ROUTE_PATH.HELP,
 				element: <div>Help</div>
+			},
+			{
+				path: ROUTE_PATH.STORYBOOK,
+				Component: StorybookPage
 			},
 			{
 				path: ROUTE_PATH.ERROR,

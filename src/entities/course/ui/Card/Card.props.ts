@@ -1,9 +1,8 @@
 import type { ReactNode } from 'react'
+import type { Course } from '../../model/types'
 
 export interface CardProps {
-	image: string
-	title: string
-	content: ReactNode
-	tags: ReactNode
-	footer: ReactNode
+	course: Course
+	footerSlot?: ReactNode
+	className?: string
 }
