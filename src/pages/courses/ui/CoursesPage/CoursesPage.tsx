@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import style from './Courses.module.css'
 import { CardCourse, COURSE_TABS, useCourseStore } from '@/entities/course'
-import { Stats, useUserStore } from '@/entities/user'
 import { Tabs } from '@/shared/ui'
+import { Stats, useUserStore } from '@/entities/user'
 
 export const CoursesPage = () => {
 	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
