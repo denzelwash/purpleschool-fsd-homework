@@ -3,6 +3,7 @@ import style from './Courses.module.css'
 import { CardCourse, COURSE_TABS, useCourseStore } from '@/entities/course'
 import { Tabs } from '@/shared/ui'
 import { Stats, useUserStore } from '@/entities/user'
+import { GoToCourseDetailsButton } from '@/features/go-to-course-details'
 
 export const CoursesPage = () => {
 	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
@@ -23,7 +24,7 @@ export const CoursesPage = () => {
 				{!!courses.length && (
 					<div className={style['course-grid']}>
 						{courses.map((course) => (
-							<CardCourse key={course.id} course={course} />
+							<CardCourse key={course.id} course={course} footerSlot={<GoToCourseDetailsButton courseId={course.id} />} />
 						))}
 					</div>
 				)}
