@@ -4,6 +4,7 @@ import { CardCourse, COURSE_TABS, useCourseStore } from '@/entities/course'
 import { Tabs } from '@/shared/ui'
 import { Stats, useUserStore } from '@/entities/user'
 import { GoToCourseDetailsButton } from '@/features/go-to-course-details'
+import { FilterCourses } from '@/features/filter-courses'
 
 export const CoursesPage = () => {
 	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
@@ -58,6 +59,7 @@ export const CoursesPage = () => {
 
 	return (
 		<>
+			<FilterCourses />
 			<div>{coursesTemplate()}</div>
 			<div>{statsTemplate()}</div>
 			<div>{coursesCountTemplate()}</div>

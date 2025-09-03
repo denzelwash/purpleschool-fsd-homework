@@ -13,3 +13,8 @@ export interface CourseCount {
 	text: string
 	value: number
 }
+
+export interface FetchCoursesParams {
+	directions?: string[]
+	trainingType?: string
+}
