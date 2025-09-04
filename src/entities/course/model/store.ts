@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { fetchCourses, fetchCoursesCount } from '../api/requests'
-import type { Course, CourseCount } from './types'
+import type { Course, CourseCount, FetchCoursesParams } from './types'
 
 interface CourseState {
 	courses: Course[]
@@ -11,7 +11,7 @@ interface CourseState {
 	isLoadingCoursesCount: boolean
 	errorCoursesCount: Error | null
 
-	loadCourses: (params?: { force: boolean }) => Promise<void>
+	loadCourses: (params?: { params?: FetchCoursesParams; force: boolean }) => Promise<void>
 	loadCoursesCount: (params?: { force: boolean }) => Promise<void>
 }
 
@@ -20,14 +20,17 @@ export const useCourseStore = create<CourseState>((set, get) => ({
 	isLoadingCourses: false,
 	errorCourses: null,
 
-	loadCourses: async (params) => {
-		const force = params?.force
-		if (get().isLoadingCourses || (get().courses.length > 0 && !force)) {
+	loadCourses: async (payload) => {
+		const { force, params } = payload || {}
+		if (get().isLoadingCourses) {
+			return
+		}
+		if (!force && get().courses.length > 0 && !params) {
 			return
 		}
 		set({ isLoadingCourses: true, errorCourses: null })
 		try {
-			const data = await fetchCourses()
+			const data = await fetchCourses(params)
 			set({ courses: data, isLoadingCourses: false })
 		} catch (e) {
 			set({ errorCourses: e as Error, isLoadingCourses: false })
