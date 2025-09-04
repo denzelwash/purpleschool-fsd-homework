@@ -3,8 +3,8 @@ import style from './Courses.module.css'
 import { CardCourse, COURSE_TABS, useCourseStore } from '@/entities/course'
 import { Tabs } from '@/shared/ui'
 import { Stats, useUserStore } from '@/entities/user'
-import { GoToCourseDetailsButton } from '@/features/go-to-course-details'
-import { FilterCourses } from '@/features/filter-courses'
+import { GoToCourseDetailsButton } from '@/features/courses/go-to-detail-page'
+import { FilterCourses } from '@/features/courses/filter'
 
 export const CoursesPage = () => {
 	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()

@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { Button } from '../../../../shared/ui'
+import { Button } from '@/shared/ui'
 import type { GoToCourseDetailsButtonProps } from './GoToCourseDetailsButton.props'
 import { ROUTE_PATH } from '@/shared/config'
 
