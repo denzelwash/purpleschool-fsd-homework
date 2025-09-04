@@ -5,6 +5,7 @@ import { Tabs } from '@/shared/ui'
 import { Stats, useUserStore } from '@/entities/user'
 import { GoToCourseDetailsButton } from '@/features/courses/go-to-detail-page'
 import { FilterCourses } from '@/features/courses/filter'
+import { SendMessage } from '@/features/ai/send-message'
 
 export const CoursesPage = () => {
 	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
@@ -63,6 +64,13 @@ export const CoursesPage = () => {
 			<div>{coursesTemplate()}</div>
 			<div>{statsTemplate()}</div>
 			<div>{coursesCountTemplate()}</div>
+			<div>
+				<h2>Чат</h2>
+				<div>Сообщения...</div>
+				<div>
+					<SendMessage></SendMessage>
+				</div>
+			</div>
 		</>
 	)
 }
