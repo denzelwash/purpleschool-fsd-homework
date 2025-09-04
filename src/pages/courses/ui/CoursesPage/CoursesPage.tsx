@@ -3,6 +3,7 @@ import style from './Courses.module.css'
 import { CardCourse, COURSE_TABS, useCourseStore } from '@/entities/course'
 import { Tabs } from '@/shared/ui'
 import { Stats, useUserStore } from '@/entities/user'
+import { useAiChatStore } from '@/entities/ai'
 import { GoToCourseDetailsButton } from '@/features/courses/go-to-detail-page'
 import { FilterCourses } from '@/features/courses/filter'
 import { SendMessage } from '@/features/ai/send-message'
@@ -11,6 +12,7 @@ export const CoursesPage = () => {
 	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
 	const { coursesCount, loadCoursesCount } = useCourseStore()
 	const { stats, isLoadingStats, errorStats, loadStats } = useUserStore()
+	const { messages } = useAiChatStore()
 
 	const [activeCourseTab, setActiveCourseTab] = useState('my')
 
@@ -66,7 +68,11 @@ export const CoursesPage = () => {
 			<div>{coursesCountTemplate()}</div>
 			<div>
 				<h2>Чат</h2>
-				<div>Сообщения...</div>
+				<div className={style['messages-grid']}>
+					{messages.map((message) => (
+						<span>{message.text}</span>
+					))}
+				</div>
 				<div>
 					<SendMessage></SendMessage>
 				</div>
