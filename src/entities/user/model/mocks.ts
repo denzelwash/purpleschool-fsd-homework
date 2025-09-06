@@ -1,4 +1,4 @@
-import type { Stats } from './types'
+import type { Stats, User } from './types'
 
 export const MOCK_STATS: Stats[] = [
 	{
@@ -18,3 +18,12 @@ export const MOCK_STATS: Stats[] = [
 		desc: 'Получено достижений'
 	}
 ]
+
+export const MOCK_USER: User = {
+	name: 'Имя',
+	avatar: 'https://avatars.githubusercontent.com/u/51025480?v=4',
+	info: [
+		{ text: '3500', desc: 'Бонусов' },
+		{ text: '33%', desc: 'Уровень навыков' }
+	]
+}
