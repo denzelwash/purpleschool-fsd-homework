@@ -1,1 +1,1 @@
-export { fetchStats } from './requests'
+export { fetchStats, fetchUser } from './requests'

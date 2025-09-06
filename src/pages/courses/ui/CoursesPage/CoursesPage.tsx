@@ -7,6 +7,7 @@ import { useAiChatStore } from '@/entities/ai'
 import { GoToCourseDetailsButton } from '@/features/courses/go-to-detail-page'
 import { FilterCourses } from '@/features/courses/filter'
 import { SendMessage } from '@/features/ai/send-message'
+import { Info } from '@/widgets/user'
 
 export const CoursesPage = () => {
 	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
@@ -62,6 +63,7 @@ export const CoursesPage = () => {
 
 	return (
 		<>
+			<Info />
 			<FilterCourses />
 			<div>{coursesTemplate()}</div>
 			<div>{statsTemplate()}</div>
