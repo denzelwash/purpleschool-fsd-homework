@@ -7,11 +7,12 @@ interface CourseState {
 	isLoadingCourses: boolean
 	errorCourses: Error | null
 
+	loadCourses: (params?: { params?: FetchCoursesParams; force: boolean }) => Promise<void>
+
 	coursesCount: CourseCount[]
 	isLoadingCoursesCount: boolean
 	errorCoursesCount: Error | null
 
-	loadCourses: (params?: { params?: FetchCoursesParams; force: boolean }) => Promise<void>
 	loadCoursesCount: (params?: { force: boolean }) => Promise<void>
 }
 

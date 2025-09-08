@@ -12,7 +12,9 @@ export const Info = () => {
 				{user?.avatar && <Avatar image={user.avatar} />}
 				<h3>{user?.name}</h3>
 			</div>
-			<div>{Array.isArray(user?.info) && user?.info.map((info) => <InfoBox text={info.text} desc={info.desc} icon="Star" />)}</div>
+			<div>
+				{Array.isArray(user?.info) && user?.info.map((info) => <InfoBox key={info.text} text={info.text} desc={info.desc} icon="Star" />)}
+			</div>
 		</div>
 	)
 }

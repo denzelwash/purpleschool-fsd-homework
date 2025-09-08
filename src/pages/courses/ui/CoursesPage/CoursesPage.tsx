@@ -1,39 +1,21 @@
 import { useEffect, useState } from 'react'
-import style from './Courses.module.css'
-import { CardCourse, COURSE_TABS, useCourseStore } from '@/entities/course'
+import { COURSE_TABS, useCourseStore } from '@/entities/course'
 import { Tabs } from '@/shared/ui'
 import { Stats, useUserStore } from '@/entities/user'
-import { GoToCourseDetailsButton } from '@/features/courses/go-to-detail-page'
 import { FilterCourses } from '@/features/courses/filter'
 import { Info } from '@/widgets/user'
 import { Chat } from '@/widgets/ai'
+import { Catalog } from '@/widgets/course'
 
 export const CoursesPage = () => {
-	const { courses, isLoadingCourses, errorCourses, loadCourses } = useCourseStore()
 	const { coursesCount, loadCoursesCount } = useCourseStore()
 	const { stats, isLoadingStats, errorStats, loadStats } = useUserStore()
 
 	const [activeCourseTab, setActiveCourseTab] = useState('my')
 
 	useEffect(() => {
-		Promise.all([loadCourses(), loadStats(), loadCoursesCount()])
-	}, [loadCourses, loadStats, loadCoursesCount])
-
-	const coursesTemplate = () => {
-		return (
-			<div>
-				{isLoadingCourses && <span>Загрузка курсов...</span>}
-				{errorCourses && <span>Ошибка загрузки курсов</span>}
-				{!!courses.length && (
-					<div className={style['course-grid']}>
-						{courses.map((course) => (
-							<CardCourse key={course.id} course={course} footerSlot={<GoToCourseDetailsButton courseId={course.id} />} />
-						))}
-					</div>
-				)}
-			</div>
-		)
-	}
+		Promise.all([loadStats(), loadCoursesCount()])
+	}, [loadStats, loadCoursesCount])
 
 	const statsTemplate = () => {
 		return (
@@ -63,9 +45,9 @@ export const CoursesPage = () => {
 		<>
 			<Info />
 			<FilterCourses />
-			<div>{coursesTemplate()}</div>
-			<div>{statsTemplate()}</div>
 			<div>{coursesCountTemplate()}</div>
+			<div>{<Catalog />}</div>
+			<div>{statsTemplate()}</div>
 			<Chat />
 		</>
 	)
