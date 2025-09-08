@@ -1,2 +1,2 @@
-export { Message } from './ui'
-export { useAiChatStore } from './model'
+export { Message } from './ui/Message/Message'
+export { useAiChatStore } from './model/store'
