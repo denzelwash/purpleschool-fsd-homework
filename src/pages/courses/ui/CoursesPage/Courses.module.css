@@ -3,8 +3,3 @@
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
 }
-
-.messages-grid {
-	display: grid;
-	gap: 1rem;
-}

@@ -1,0 +1,9 @@
+.chat {
+	display: grid;
+	gap: 1;
+}
+
+.messages {
+	display: grid;
+	gap: 1;
+}
