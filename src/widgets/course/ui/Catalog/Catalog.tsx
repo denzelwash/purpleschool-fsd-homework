@@ -1,4 +1,4 @@
-import { GoToCourseDetailsButton } from '@/features/courses/go-to-detail-page'
+import { GoToCourseDetailsButton } from '@/features/courses-go-to-detail-page'
 import style from './Catalog.module.css'
 import { CardCourse, useCourseStore } from '@/entities/course'
 import { useEffect } from 'react'

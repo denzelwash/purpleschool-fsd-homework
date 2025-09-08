@@ -1,6 +1,6 @@
 // import { http } from '@/shared/api'
 import type { Course, CourseCount, FetchCoursesParams } from '../model/types'
-import { MOCK_COURSES, MOCK_COURSE_COUNT } from '../model'
+import { MOCK_COURSES, MOCK_COURSE_COUNT } from '../model/mocks'
 
 export const fetchCourses = async (params?: FetchCoursesParams): Promise<Course[]> => {
 	// const queryParams = new URLSearchParams()

@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import type { AiMessage, SendMessageDto } from './types'
-import { sendMessageRequest } from '../api'
+import { sendMessageRequest } from '../api/requests'
 
 interface AiChatState {
 	messages: AiMessage[]

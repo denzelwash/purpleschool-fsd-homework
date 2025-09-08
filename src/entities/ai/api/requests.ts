@@ -1,6 +1,6 @@
 // import { http } from '@/shared/api'
-import type { AiMessage, SendMessageDto } from '../model'
-import { MOCK_MESSAGE } from '../model'
+import type { AiMessage, SendMessageDto } from '../model/types'
+import { MOCK_MESSAGE } from '../model/mocks'
 
 export const sendMessageRequest = async (data: SendMessageDto): Promise<AiMessage> => {
 	// const response = await http.post<AiMessage>('/ai/chat', data)

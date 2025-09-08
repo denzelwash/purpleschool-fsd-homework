@@ -1,4 +1,4 @@
-import type { CourseDirection, TrainingType } from '../model'
+import type { CourseDirection, TrainingType } from '../model/types'
 
 export const DIRECTION_OPTIONS: { id: CourseDirection; label: string }[] = [
 	{ id: 'All', label: 'Все' },

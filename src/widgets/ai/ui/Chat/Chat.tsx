@@ -1,6 +1,6 @@
 import { useAiChatStore } from '@/entities/ai'
 import style from './Chat.module.css'
-import { SendMessage } from '@/features/ai/send-message'
+import { SendMessage } from '@/features/ai-send-message'
 
 export const Chat = () => {
 	const { messages } = useAiChatStore()

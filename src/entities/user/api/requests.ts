@@ -1,6 +1,6 @@
 // import { http } from '@/shared/api'
 import type { Stats, User } from '../model/types'
-import { MOCK_STATS, MOCK_USER } from '../model'
+import { MOCK_STATS, MOCK_USER } from '../model/mocks'
 
 export const fetchUser = async (): Promise<User> => {
 	// const response = await http.get<User>('/user')

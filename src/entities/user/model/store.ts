@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { fetchStats, fetchUser } from '../api'
+import { fetchStats, fetchUser } from '../api/requests'
 import type { Stats, User } from './types'
 
 interface UserState {

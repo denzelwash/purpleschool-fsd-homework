@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
-import { useCoursesFilterStore } from '../../model'
+import { useCoursesFilterStore } from '../../model/store'
 import { useCourseStore } from '@/entities/course'
 import { useDebounce } from '@/shared/lib/useDebounce'
 import { Checkbox, Radio } from '@/shared/ui'
-import { DIRECTION_OPTIONS, TRAINING_TYPE_OPTIONS } from '../../config'
+import { DIRECTION_OPTIONS, TRAINING_TYPE_OPTIONS } from '../../config/const'
 import style from './FilterCourses.module.css'
 
 export const FilterCourses = () => {
