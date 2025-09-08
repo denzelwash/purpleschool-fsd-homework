@@ -1,8 +1,8 @@
 import { Icon } from '@/shared/ui'
+import type { IconComponentType } from '@/shared/ui'
 import style from './Stats.module.css'
 import type { StatsProps } from './Stats.props'
 import type { Stats as TStats } from '../../model/types'
-import type { IconComponentType } from '@/shared/ui'
 
 export const Stats = ({ stats }: StatsProps) => {
 	const IconComponent = (alias: TStats['alias']) => {
