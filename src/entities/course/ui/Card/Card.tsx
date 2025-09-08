@@ -1,6 +1,6 @@
 import style from './Card.module.css'
 import type { CardProps } from './Card.props'
-import { Card as CardWrapper, Rating, Tag } from '../../../../shared/ui'
+import { Card as CardWrapper, Rating, Tag } from '@/shared/ui'
 import classNames from 'classnames'
 
 export const Card = ({ course, footerSlot, className }: CardProps) => {

@@ -1,5 +1,5 @@
 import style from './Sidebar.module.css'
-import { Link } from '../../../../shared/ui'
+import { Link } from '@/shared/ui'
 import { nav } from '../../model/nav'
 
 export const Sidebar = () => {

@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router'
-import { ROUTE_PATH } from '../../shared/config'
+import { ROUTE_PATH } from '@/shared/config'
 import { RootLayout } from '../layouts/index'
-import { CoursesPage } from '../../pages/courses'
-import { MainPage } from '../../pages/main'
-import { StorybookPage } from '../../pages/storybook'
+import { CoursesPage } from '@/pages/courses'
+import { MainPage } from '@/pages/main'
+import { StorybookPage } from '@/pages/storybook'
 
 export const router = createBrowserRouter([
 	{

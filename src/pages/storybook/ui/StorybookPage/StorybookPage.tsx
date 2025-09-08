@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '../../../../shared/ui'
+import { Button, Card, Checkbox, Graph, InfoBox, Input, Radio, Rating, Tabs, Tag, type TabsProps } from '@/shared/ui'
 import { Avatar, Stats } from '@/entities/user'
 import { Message } from '@/entities/ai'
 import { CardCourse } from '@/entities/course'
